@@ -14,16 +14,6 @@ const winningCombinations = [
     [3, 5, 7]
   ]
   handleClick = function(event) {
-    var cell = event.target
-    console.log(cell.id);
-  }
-  
-  var cells = document.querySelectorAll("td");
-  
-  for(var i = 0; i < cells.length; i++) {
-    cells[i].addEventListener('click', handleClick)
-  }
-  handleClick = function(event) {
     var cell = event.target;
   
     cell.innerHTML = currentPlayer;
@@ -38,10 +28,28 @@ const winningCombinations = [
   
     playerSelections.push(parseInt(cell.id));
   
+    if(checkWinner(playerSelections)) {
+      alert("Player " + currentPlayer + " wins!")
+      resetGame();
+    }
+  
+    if(checkDraw()) {
+      alert("Draw!");
+      resetGame();
+    }
+  
     // Swap players
     currentPlayer = nextPlayer;
-}
+  }
 function checkWinner (
     matches=0
 )
+function checkWinner ( 
+    matches=0
+)
+if(matches++){
+    return "true"
+} else {
+    return "false"
+}
 
