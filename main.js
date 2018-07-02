@@ -23,3 +23,25 @@ const winningCombinations = [
   for(var i = 0; i < cells.length; i++) {
     cells[i].addEventListener('click', handleClick)
   }
+  handleClick = function(event) {
+    var cell = event.target;
+  
+    cell.innerHTML = currentPlayer;
+  
+    if(currentPlayer === "X" ) {
+      playerSelections = playerXSelections;
+      nextPlayer = "O";
+    } else {
+      playerSelections = playerOSelections;
+      nextPlayer = "X";
+    }
+  
+    playerSelections.push(parseInt(cell.id));
+  
+    // Swap players
+    currentPlayer = nextPlayer;
+}
+function checkWinner (
+    matches=0
+)
+
