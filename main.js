@@ -13,6 +13,7 @@ const winningCombinations = [
     [1, 5, 9],
     [3, 5, 7]
   ]
+  
   handleClick = function(event) {
     var cell = event.target;
   
@@ -27,6 +28,7 @@ const winningCombinations = [
     }
   
     playerSelections.push(parseInt(cell.id));
+    console.log(cell.id)
   
     if(checkWinner(playerSelections)) {
       alert("Player " + currentPlayer + " wins!")
@@ -41,15 +43,3 @@ const winningCombinations = [
     // Swap players
     currentPlayer = nextPlayer;
   }
-function checkWinner (
-    matches=0
-)
-function checkWinner ( 
-    matches=0
-)
-if(matches++){
-    return "true"
-} else {
-    return "false"
-}
-
