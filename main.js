@@ -28,7 +28,7 @@ const winningCombinations = [
     }
   
     playerSelections.push(parseInt(cell.id));
-    console.log(cell.id)
+    console.log(cell.innerHTML)
   
     if(checkWinner(playerSelections)) {
       alert("Player " + currentPlayer + " wins!")
@@ -43,3 +43,5 @@ const winningCombinations = [
     // Swap players
     currentPlayer = nextPlayer;
   }
+
+  
