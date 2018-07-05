@@ -1,18 +1,11 @@
 td {
-    border: 1px solid blue;
-    height: 50px;
-    width: 50 px;
-    
+    border: 1px solid blue; 
   }
   
   td:hover {
     background: orange;
-    height: 50px;
-    width: 50px
   }
   
   table {
     border: 1px solid green;
-    height: 50px;
-    width:50px
   }
