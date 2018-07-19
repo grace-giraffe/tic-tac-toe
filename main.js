@@ -1,6 +1,6 @@
 var currentPlayer = "X";
 var nextPlayer = "O";
-
+var playerSelections;
 var playerXSelections = new Array();
 var playerOSelections = new Array();
 const winningCombinations = [
@@ -40,7 +40,12 @@ const winningCombinations = [
     
     playerSelections.push(parseInt(cell.id));
 
-    
+    if(checkWin(playerSelections)){
+      alert(currentPlayer + " Wins!")
+    }
+    else if(playerOSelections.length + playerXSelections.length >= 9){
+      alert("Draw!")
+    }
 
   
   
@@ -48,5 +53,21 @@ const winningCombinations = [
     currentPlayer = nextPlayer;
     
  }
+
+ function checkWin(playerSelections){
+   console.log(playerSelections)
+  for (var combo = 0; combo < winningCombinations.length; combo++){
+    var matches = 0;
+        for (var i = 0; i < winningCombinations[combo].length; i++) {
+            if (playerSelections.includes(winningCombinations[combo][i])) {
+                matches++;
+            }
  
+            if(matches == 3)
+                return true;
+        }
+    }
+    return false;
+ }
+  hh
   
