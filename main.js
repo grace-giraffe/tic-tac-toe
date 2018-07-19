@@ -36,9 +36,17 @@ const winningCombinations = [
       playerSelections = playerOSelections;
       nextPlayer = "X";
     }
+    
+    
     playerSelections.push(parseInt(cell.id));
+
+    
+
+  
   
     // Swap players
     currentPlayer = nextPlayer;
+    
  }
+ 
   
